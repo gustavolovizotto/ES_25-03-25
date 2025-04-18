@@ -2,7 +2,6 @@ public class TstPes {
     public static void main(String[] args) { //O public significa que outro objeto de fora pode utilizar essa classe.
         Pessoa p1 = new Pessoa(); //instanciação
         Leitura l = new Leitura(); //instanciação
-        Pessoa p2 = new Pessoa(); //instanciação
 
 
         /*p1.entDados(18, "Gustavo"); //chamada do método
@@ -25,11 +24,17 @@ public class TstPes {
         p1.setNome(l.entDados("Nome:")); 
         p1.getEnder().setNumero(Integer.parseInt(l.entDados("Digite o Número: "))); //chamada do método
         p1.getEnder().setRua(l.entDados("Rua:")); //chamada do método
+        p1.getEnder().c1.setCodCid(Integer.parseInt(l.entDados("Digite o Código da Cidade: "))); //chamada do método
+        p1.getEnder().c1.setNomeCid(l.entDados("Nome da Cidade:")); //chamada do método
+        p1.getEnder().c1.setUfCid(l.entDados("UF da Cidade:")); //chamada do método
 
         System.out.println("CPF: " + p1.getCpf()); //chamada do método
         System.out.println("NOME: " + p1.getNome()); //chamada do método
         System.out.println("NUMERO: " + p1.getEnder().getNumero()); //chamada do método //reflexividade
         System.out.println("RUA: " + p1.getEnder().getRua()); //chamada do método
+        System.out.println("CIDADE: " + p1.getEnder().c1.getNomeCid()); //chamada do método
+        System.out.println("CODIGO CIDADE: " + p1.getEnder().c1.getCodCid()); //chamada do método
+        System.out.println("UF CIDADE: " + p1.getEnder().c1.getUfCid()); //chamada do método
 
         /*int a = Integer.parseInt(l.entDados("Valor1: ")); //conversão de String para int
         int b = Integer.parseInt(l.entDados("Valor2: ")); //conversão de String para int

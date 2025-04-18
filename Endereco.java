@@ -1,6 +1,7 @@
 public class Endereco {
     private String rua = "";
     private int numero = 0;
+    Cidade c1 = new Cidade(); 
 
 public int getNumero() {
     return numero;
