@@ -51,6 +51,7 @@ public class TstPes {
         System.out.println("End. P2: " + p2); //acesso ao atributo  */
         System.gc(); //chamada do garbage collector
     }//Fim do main
+    
 }
 
 //Encapsulamento é um Conceito e tecnica que permite gerenciar as trocas de mensagens. Possui niveis:

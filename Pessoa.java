@@ -47,5 +47,23 @@ public void setCpf(int cpf) {
 public void setNome(String nome) {
     this.nome = nome;
 }
+//Padrão é sempre dois construtores
+
+
+//ÚNICO: Construtor padrão é o que a gente deve fazer durante o projeto
+public Pessoa (){
+    cpf = 0; //atribuição de valor ao atributo
+    nome = ""; //atribuição de valor ao atributo
+    ender = new Endereco(); //atribuição de valor ao atributo
+}
+
+
+//Para chamar esse segundo metodo, devemos passar os parametros cpf, nome e ender, que são os atributos da classe Pessoa.
+public Pessoa (int cpf, String nome, Endereco ender){ 
+    System.out.print("Construtor Sobrecarga"); //chamada do método
+    this.cpf = cpf; //atribuição de valor ao atributo
+    this.nome = nome; //atribuição de valor ao atributo
+    this.ender = ender; //atribuição de valor ao atributo
+}
 
 }
