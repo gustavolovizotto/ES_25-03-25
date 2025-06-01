@@ -1,24 +1,25 @@
-public class Endereco {
-    private String rua = "";
-    private int numero = 0;
-    Cidade c1 = new Cidade(); 
+public class Endereco{
 
-public int getNumero() {
-    return numero;
-}
-public String getRua() {
-    return rua;
-}
+	private int num = 0;
+	private String rua = "";
 
-public void setNumero(int numero) {
-    if (numero >= 0) {
-        this.numero = numero;
-    } else {
-        System.out.println("Número inválido!");
-    }
-}
+	
+	public int getNum(){
+		return num;
+	}
 
-public void setRua(String rua) {
-    this.rua = rua;
-}
+	public String getRua(){
+		return rua;
+	}
+	
+
+	public void setNum(int num){
+		this.num = num;
+	}
+
+	public void setRua(String rua){
+		this.rua = rua;
+	}
+
+
 }

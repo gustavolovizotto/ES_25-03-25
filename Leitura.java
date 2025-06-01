@@ -1,21 +1,37 @@
-
+import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Leitura {
-    public String entDados (String rotulo){
-        System.out.println(rotulo);
-        InputStreamReader teclado = new InputStreamReader(System.in);//Captura a entrada do teclado
-        BufferedReader bufTec = new BufferedReader(teclado);//Cria um buffer para a entrada do teclado
+public class Leitura{
+	
+	private static Leitura leitUnic; //1º passo
+	
+	private Leitura(){} //2º passo
+	
+	//Method Singleton:
+	
+	public static Leitura geraLeitura(){ //3º passo
+		if(leitUnic == null){
+			leitUnic = new Leitura();
+		}
+		return leitUnic;
+	} 
+	
+	
 
-        String ret = "";
-        try{
-            ret = bufTec.readLine(); //Lê a linha digitada pelo usuário
-        }
-        catch (IOException ioe){
-            System.out.println("Erro no jvm ou ram "); //Exibe a mensagem de erro caso ocorra
-        }
-        return ret;
-    }
+	public static String entDados(String rotulo){
+		
+		System.out.println(rotulo);
+		InputStreamReader teclado = new InputStreamReader(System.in);
+		BufferedReader bufTec = new BufferedReader(teclado);
+		String ret = "";
+		try{
+			ret = bufTec.readLine();
+		}
+		catch(IOException ioe){
+			System.out.println("ERRO de JVM ou RAM");
+		}
+		return ret;
+	}
+
 }
